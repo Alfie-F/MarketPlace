@@ -159,8 +159,10 @@ li#second{
 }
 
 li#pic{
-  width: 20%;
-  text-align: center;
+  display: inline-table;
+  margin: 0%;
+  border: 0%;
+  padding: 0;
 }
 
 li#third{
