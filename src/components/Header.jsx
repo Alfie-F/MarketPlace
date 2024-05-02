@@ -5,8 +5,6 @@ import img from "../assets/img.png";
 const Header = () => {
   return (
     <header className="header">
-      <img src={img} alt="abay logo" className="logo" />
-
       <Link to="/" className="linkInHeader" id="first">
         Home
       </Link>
@@ -16,6 +14,7 @@ const Header = () => {
       <Link to="/account/basket" className="linkInHeader" id="third">
         Basket
       </Link>
+      <img src={img} alt="abay logo" className="logo" />
     </header>
   );
 };

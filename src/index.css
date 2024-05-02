@@ -22,7 +22,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(189, 185, 185);
   font-family: 'Courier New', Courier, monospace;
   
 }
@@ -37,12 +37,13 @@ h1 {
 .header {
   position: sticky; top: 0;
   display: flex;
+  font-size: 10%;
   flex-direction: row;
   padding: 10px;
   text-align: center;
-  background: #d11913;
+  background: rgb(173, 0, 0);
   border-bottom-left-radius: 2.5rem;
-  overflow-x:auto;
+  /* overflow-x:auto; */
   color: white;
   font-size: 30px;
   /* white-space: nowrap; */
@@ -62,22 +63,22 @@ h1 {
   text-align: left;
   color: #ffffff;
   /* padding: 10px; */
-  padding-top: 0.5rem;
-  padding-left: 8%;
-  padding-right: 8%;
+  padding-top: 1rem;
+  padding-left: 4%;
+  padding-right: 4%;
   margin-top: 0%;
-  margin-left: 20px;
-  font-size: 1.8em;
+  margin-left: 10px;
+  font-size: 1.5rem;
   border-radius: 5%;
   border-top: 5px solid #CCCCCC;
   border-right: 5px solid #333333;
   border-bottom: 5px solid #333333;
-  border-left: 5px solid #CCCCCC;
+  border-left: 5px solid #CCCCCC;;
 }
 
 nav{  
   margin-top: 2px;
-  padding: 50px;
+  padding: 10px;
   color: rgb(0, 0, 0);
   font-size: 2rem;
   background-color: rgb(240, 238, 238);
@@ -92,12 +93,12 @@ main{
   flex-flow: column;
   height: 100%;
   min-width: 57%;
-  width: fit-content;
+  width: 100%;
   padding: 20px;
   color: rgb(0, 0, 0);
   font-size: 2rem;
   margin-top: 2px;
-  background-color: rgb(240, 238, 238);
+  background-color: rgb(235, 235, 235);
   border-radius: 2rem;
   border-top: 3px solid #CCCCCC;
   border-right: 3px solid #333333;
@@ -107,9 +108,9 @@ main{
 
 .logo{
   border-radius: 5%;
-  height: 88px;
-  margin-left: 20px;
- margin-top: 0.19rem;
+  height: 90px;
+  margin-left: 48%;
+ margin-top: 0.05rem;
  border-top: 3px solid #CCCCCC;
  border-right: 3px solid #333333;
  border-bottom: 3px solid #333333;
@@ -118,15 +119,15 @@ main{
 
 
 .linkInHeader#first{
-  color: rgb(34, 62, 221);
+  color: rgb(173, 0, 0);
 }
 
 .linkInHeader#second {
-  color: rgb(221, 209, 41);
+  color: rgb(173, 0, 0);
 }
 
 .linkInHeader#third {
-  color: rgb(6, 173, 0);
+  color: rgb(173, 0, 0);
 }
 
 li{
@@ -137,6 +138,7 @@ li{
   background-color: rgb(240, 238, 238);
   text-align: left;
   margin: 2px;
+  margin-left: 18%;
   list-style-type: none;
   border-radius: 2rem;
   border-top: 3px solid #CCCCCC;
@@ -145,30 +147,42 @@ li{
   border-left: 3px solid #CCCCCC;
   display: inline-block;
   white-space: nowrap;
+  width: fit-content;
 }
 
 li#first{
-  min-width: 300px;
+
   padding: 40px;
+  padding-left: 10px;
+   /* min-width:300px; */
+   /* padding-right: min(80%,300px); */
+   /* padding-right: 50%; */
+   margin-left: 0;
+   width: 300px;
 }
 
 li#second{
-  width: 15%;
   min-width: 200px;
   padding: 40px;
+  padding-right: 10px;
 }
 
 li#pic{
-  display: inline-table;
-  margin: 0%;
-  border: 0%;
-  padding: 0;
+  min-width: 200px;
+  display: inline;
+  padding-top: 43px;
+  padding-bottom: 43px;
+  margin-left: 120px;
+  /* margin: max(200px); */
+  position: fl;
+  text-align: right;
 }
 
 li#third{
-  text-align: right;
   width: 60px;
   padding: 40px;
+  padding-right: 50px;;
+  padding-left: 20px;
 }
 
 ul{
@@ -180,9 +194,20 @@ ul{
   white-space: nowrap;
   margin: 2px;
   padding: 0;
+  text-align: left;
+  padding-left: 5px;
+  /* width:fit-content; */
+  max-width: 1400;
 }
 
 img{
-  border-radius:20px;
+  margin-top: 10px;
+  
+}
+
+img#item{
+  height: 100px;
+  margin-bottom: -45px;
+  border-radius:30px;
   align-items: end;
 }

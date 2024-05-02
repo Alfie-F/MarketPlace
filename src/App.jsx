@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 import Home from "./components/Home.jsx";
-// import { getItems } from "../api.js";
+// import { getItems } from "../Api.jsx";
 import axios from "axios";
 
 function App() {
@@ -17,7 +17,6 @@ function App() {
         setItems(allItems);
       });
   };
-  console.log(items);
   useEffect(() => getItems(), []);
   return (
     <div className="app">
