@@ -1,4 +1,11 @@
+import { useState, useEffect } from "react";
+
 const Home = ({ items, categories }) => {
+  const [cat, setCat] = useState();
+  function changeCat(change) {
+    console.log(change.target.value);
+    setCat(change.target.value);
+  }
   return (
     <>
       <nav>
@@ -7,7 +14,7 @@ const Home = ({ items, categories }) => {
       </nav>
       <nav id="categories">
         <label>Filter by category:</label>
-        <select name="categories" id="categoriesDropDown">
+        <select name="categories" id="categoriesDropDown" onChange={changeCat}>
           <option value="All">All</option>
           {categories.map((category) => {
             return (
@@ -23,27 +30,52 @@ const Home = ({ items, categories }) => {
       </nav>
       <main>
         {items.map((item) => {
-          return (
-            <ul id="item.category_name">
-              <li key={item.item_id} id="first">
-                {item.item_name}
-              </li>
-              <li key={item.item_id + 1000} id="second">
-                Category: {item.category_name}
-              </li>
-              <li key={item.item_id + 2000} id="third">
-                £{item.price}
-              </li>
-              <li
-                key={item.item_id + 3000}
-                id="pic"
-                width="40px"
-                height="220px"
-              >
-                <img id="item" src={item.img_url} alt={item.item_name} />
-              </li>
-            </ul>
-          );
+          console.log(cat);
+          if (!cat || cat == "All") {
+            return (
+              <ul id="item.category_name">
+                <li key={item.item_id} id="first">
+                  {item.item_name}
+                </li>
+                <li key={item.item_id + 1000} id="second">
+                  Category: {item.category_name}
+                </li>
+                <li key={item.item_id + 2000} id="third">
+                  £{item.price}
+                </li>
+                <li
+                  key={item.item_id + 3000}
+                  id="pic"
+                  width="40px"
+                  height="220px"
+                >
+                  <img id="item" src={item.img_url} alt={item.item_name} />
+                </li>
+              </ul>
+            );
+          } else if (item.category_name === cat) {
+            return (
+              <ul id="item.category_name">
+                <li key={item.item_id} id="first">
+                  {item.item_name}
+                </li>
+                <li key={item.item_id + 1000} id="second">
+                  Category: {item.category_name}
+                </li>
+                <li key={item.item_id + 2000} id="third">
+                  £{item.price}
+                </li>
+                <li
+                  key={item.item_id + 3000}
+                  id="pic"
+                  width="40px"
+                  height="220px"
+                >
+                  <img id="item" src={item.img_url} alt={item.item_name} />
+                </li>
+              </ul>
+            );
+          }
         })}
       </main>
     </>

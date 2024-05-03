@@ -14,6 +14,9 @@ const Header = () => {
       <Link to="/account/basket" className="linkInHeader" id="third">
         Basket
       </Link>
+      <Link to="/account/sell" className="linkInHeader" id="third">
+        Sell
+      </Link>
       <img src={img} alt="abay logo" className="logo" />
     </header>
   );
