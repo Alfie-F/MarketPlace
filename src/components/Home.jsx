@@ -1,25 +1,45 @@
-const Home = ({ items }) => {
+const Home = ({ items, categories }) => {
   return (
     <>
       <nav>
-        Welcome to ABAY, in no way shape or form affiliated with any vowel-bay
-        based buying and selling platforms.
-        <select></select>
+        Welcome to - abay - in no way shape or form affiliated with any
+        vowel-bay based buying and selling platforms.
+      </nav>
+      <nav id="categories">
+        <label>Filter by category:</label>
+        <select name="categories" id="categoriesDropDown">
+          <option value="All">All</option>
+          {categories.map((category) => {
+            return (
+              <option
+                key={category.category_name}
+                value={category.category_name}
+              >
+                {category.category_name}
+              </option>
+            );
+          })}
+        </select>
       </nav>
       <main>
         {items.map((item) => {
           return (
-            <ul>
+            <ul id="item.category_name">
               <li key={item.item_id} id="first">
-                {item.item_name}{" "}
+                {item.item_name}
               </li>
-              <li key={item.item_id} id="second">
+              <li key={item.item_id + 1000} id="second">
                 Category: {item.category_name}
               </li>
-              <li key={item.item_id} id="third">
+              <li key={item.item_id + 2000} id="third">
                 £{item.price}
               </li>
-              <li id="pic" width="40px" height="220px">
+              <li
+                key={item.item_id + 3000}
+                id="pic"
+                width="40px"
+                height="220px"
+              >
                 <img id="item" src={item.img_url} alt={item.item_name} />
               </li>
             </ul>
