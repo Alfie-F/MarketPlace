@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 import Home from "./components/Home.jsx";
+import Sell from "./components/Sell.jsx";
 // import { getItems } from "../Api.jsx";
 import axios from "axios";
 
@@ -39,6 +40,10 @@ function App() {
         <Route
           path="/"
           element={<Home items={items} categories={categories} />}
+        />
+        <Route
+          path="/account/sell"
+          element={<Sell categories={categories} />}
         />
       </Routes>
     </div>
